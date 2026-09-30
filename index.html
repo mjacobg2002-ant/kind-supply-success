@@ -32,10 +32,19 @@
   .btn--ghost{color:var(--cream);border-color:rgba(255,255,255,.25)}
   .btn--ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
 
-  header{position:sticky;top:0;z-index:50;background:rgba(10,18,34,.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .nav img{height:36px;width:auto}
-  .nav .btn{padding:.55em 1.2em;font-size:.85rem}
+  header{position:sticky;top:0;z-index:50;background:rgba(10,16,28,.72);backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:74px}
+  .nav__logo{justify-self:start}
+  .nav__logo img{height:34px;width:auto;display:block}
+  .nav__links{justify-self:center;display:flex;gap:clamp(20px,2.6vw,38px)}
+  .nav__links a{font-family:var(--dsp);font-weight:500;font-size:.96rem;color:var(--text);position:relative;transition:color .2s}
+  .nav__links a:hover{color:var(--cream)}
+  .nav__cta{justify-self:end}
+  .nav .btn{padding:.6em 1.35em;font-size:.9rem}
+  @media(max-width:760px){
+    .nav{grid-template-columns:1fr auto}
+    .nav__links{display:none}
+  }
 
   /* hero */
   .hero{position:relative;padding:clamp(62px,9vw,108px) 0 clamp(38px,5vw,60px);text-align:center;overflow:hidden;background:#0a0f1a}
@@ -49,6 +58,16 @@
   .hero h1{font-size:clamp(2.6rem,8vw,5.4rem);letter-spacing:-.01em}
   .hero p.lede{max-width:46ch;margin:20px auto 0;font-size:clamp(1.05rem,2vw,1.28rem)}
   .hero .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+
+  /* industries */
+  .ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .ind{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5;border:1px solid rgba(255,255,255,.08)}
+  .ind img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .ind:hover img{transform:scale(1.05)}
+  .ind::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,16,28,.05) 30%,rgba(10,16,28,.85))}
+  .ind span{position:absolute;left:16px;bottom:14px;z-index:2;font-family:var(--dsp);font-weight:700;color:var(--cream);font-size:1.05rem;letter-spacing:-.01em}
+  .ind span small{display:block;font-family:var(--body);font-weight:500;font-size:.72rem;letter-spacing:.04em;color:var(--gold);text-transform:none}
+  @media(max-width:760px){.ind-grid{grid-template-columns:1fr 1fr}}
 
   /* stat strip */
   .stats{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:var(--navy-2)}
@@ -165,8 +184,14 @@
 
 <header>
   <div class="shell nav">
-    <img src="assets/logo.svg" alt="Kind Supply Digital">
-    <a class="btn btn--gold" href="#book">Book a Call</a>
+    <a class="nav__logo" href="#top" aria-label="Kind Supply Digital — home"><img src="assets/logo.svg" alt="Kind Supply Digital"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work">Results</a>
+      <a href="#crm">Speed-to-Lead</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#book">Contact</a>
+    </nav>
+    <a class="btn btn--gold nav__cta" href="#book">Book a Call</a>
   </div>
 </header>
 
@@ -198,6 +223,23 @@
     </div>
   </div>
 </div>
+
+<!-- INDUSTRIES -->
+<section id="industries">
+  <div class="shell">
+    <div class="sec-head">
+      <p class="eyebrow">Who We Grow</p>
+      <h2>Built for home-service contractors.</h2>
+      <p>Concrete, roofing, landscaping, decks &amp; more — we run the ads that keep your crews booked.</p>
+    </div>
+    <div class="ind-grid">
+      <figure class="ind"><img src="assets/ind-concrete.jpg" alt="Concrete pouring on a job site" loading="lazy"><span>Concrete<small>Driveways · Patios · Slabs</small></span></figure>
+      <figure class="ind"><img src="assets/ind-roofing.jpg" alt="Roofer torching down a roof membrane" loading="lazy"><span>Roofing<small>Repairs · Replacements</small></span></figure>
+      <figure class="ind"><img src="assets/ind-landscaping.jpg" alt="Landscaped home exterior with curb appeal" loading="lazy"><span>Landscaping<small>Lawns · Curb Appeal</small></span></figure>
+      <figure class="ind"><img src="assets/ind-decks.jpg" alt="Custom wood deck and outdoor living space" loading="lazy"><span>Decks &amp; Patios<small>Outdoor Living</small></span></figure>
+    </div>
+  </div>
+</section>
 
 <!-- CASE STUDIES -->
 <section id="work">
