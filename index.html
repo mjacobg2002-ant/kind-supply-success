@@ -57,10 +57,11 @@
   .hero__scrim{position:absolute;inset:0;z-index:1;
     background:linear-gradient(90deg,rgba(11,15,22,.92),rgba(11,15,22,.55) 55%,rgba(11,15,22,.35)),
       linear-gradient(0deg,rgba(11,15,22,.90),rgba(11,15,22,.15) 55%)}
-  /* bottom-up color fade so the logo strip reads over the video */
-  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:clamp(180px,26vh,300px);z-index:1;pointer-events:none;
-    background:linear-gradient(0deg,var(--navy) 0%,var(--navy) 14%,rgba(17,26,38,.72) 48%,transparent 100%)}
-  .hero__inner{position:relative;z-index:2;flex:1;display:flex;align-items:flex-end;padding-top:clamp(110px,15vh,150px);padding-bottom:clamp(18px,3vh,36px)}
+  /* bottom-up light fade so the (mostly dark) logos read over the video */
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:clamp(200px,28vh,320px);z-index:1;pointer-events:none;
+    background:linear-gradient(0deg,#eef2f6 0%,#eef2f6 42%,rgba(238,242,246,.55) 72%,transparent 100%)}
+  .hero .shell{max-width:1340px}
+  .hero__inner{position:relative;z-index:2;flex:1;display:flex;align-items:flex-end;padding-top:clamp(110px,15vh,150px);padding-bottom:clamp(46px,9vh,110px)}
   .hero__content{max-width:540px;text-align:left}
   .hero .eyebrow{margin-bottom:12px;font-size:.7rem}
   .hero h1{font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:-.02em;text-shadow:0 2px 30px rgba(0,0,0,.45)}
