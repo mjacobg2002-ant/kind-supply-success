@@ -60,13 +60,13 @@
   /* bottom-up color fade so the logo strip reads over the video */
   .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:clamp(180px,26vh,300px);z-index:1;pointer-events:none;
     background:linear-gradient(0deg,var(--navy) 0%,var(--navy) 14%,rgba(17,26,38,.72) 48%,transparent 100%)}
-  .hero__inner{position:relative;z-index:2;flex:1;display:flex;align-items:center;padding-top:clamp(120px,16vh,168px);padding-bottom:24px}
-  .hero__content{max-width:640px;text-align:left}
-  .hero .eyebrow{margin-bottom:16px}
-  .hero h1{font-size:clamp(2.5rem,6vw,4.4rem);letter-spacing:-.02em;text-shadow:0 2px 30px rgba(0,0,0,.45)}
-  .hero__points{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:15px}
-  .hero__points li{display:flex;gap:12px;align-items:flex-start;color:var(--text);font-size:1.04rem;max-width:52ch}
-  .hero__points svg{flex:none;width:22px;height:22px;color:var(--gold);margin-top:3px}
+  .hero__inner{position:relative;z-index:2;flex:1;display:flex;align-items:flex-end;padding-top:clamp(110px,15vh,150px);padding-bottom:clamp(18px,3vh,36px)}
+  .hero__content{max-width:540px;text-align:left}
+  .hero .eyebrow{margin-bottom:12px;font-size:.7rem}
+  .hero h1{font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:-.02em;text-shadow:0 2px 30px rgba(0,0,0,.45)}
+  .hero__points{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:11px}
+  .hero__points li{display:flex;gap:11px;align-items:flex-start;color:var(--text);font-size:.94rem;max-width:48ch}
+  .hero__points svg{flex:none;width:19px;height:19px;color:var(--gold);margin-top:2px}
   .hero__points b{color:var(--cream);font-weight:700}
   .hero .actions{display:flex;gap:14px;justify-content:flex-start;flex-wrap:wrap;margin-top:30px}
   /* logo carousel */
