@@ -436,6 +436,8 @@
 </footer>
 
 <script>
+  if('scrollRestoration' in history){history.scrollRestoration='manual';}
+  window.addEventListener('load',function(){ if(!location.hash) window.scrollTo(0,0); });
   document.getElementById('yr').textContent=new Date().getFullYear();
   if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){var hv=document.querySelector('.hero__bg');if(hv){hv.removeAttribute('autoplay');hv.pause&&hv.pause();}}
   function calculateRevenue(){
