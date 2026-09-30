@@ -57,6 +57,9 @@
   .hero__scrim{position:absolute;inset:0;z-index:1;
     background:linear-gradient(90deg,rgba(11,15,22,.92),rgba(11,15,22,.55) 55%,rgba(11,15,22,.35)),
       linear-gradient(0deg,rgba(11,15,22,.90),rgba(11,15,22,.15) 55%)}
+  /* bottom-up color fade so the logo strip reads over the video */
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:clamp(180px,26vh,300px);z-index:1;pointer-events:none;
+    background:linear-gradient(0deg,var(--navy) 0%,var(--navy) 14%,rgba(17,26,38,.72) 48%,transparent 100%)}
   .hero__inner{position:relative;z-index:2;flex:1;display:flex;align-items:center;padding-top:clamp(120px,16vh,168px);padding-bottom:24px}
   .hero__content{max-width:640px;text-align:left}
   .hero .eyebrow{margin-bottom:16px}
