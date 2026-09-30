@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kind Supply Digital — Real Results for Home Services</title>
-<meta name="description" content="Kind Supply Digital gets home-service businesses an extra 3–4 jobs a month with high-converting Meta ads. Real campaigns, real results.">
+<title>Kind Supply Digital — Results Portfolio | Home Services</title>
+<meta name="description" content="Kind Supply Digital books home-service contractors an extra 3–4 jobs a month with Meta ads. Real campaigns, real closes — and a revenue calculator to project your own results.">
 <meta name="theme-color" content="#0c1526">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#0c1526; --navy-2:#111d33; --navy-3:#16233f;
     --gold:#c9a24a; --gold-2:#e2c072;
     --cream:#f4f1e9; --text:#c3ccdb; --muted:#808ba3; --line:rgba(201,162,74,.28);
-    --shell:1180px;
+    --shell:1120px;
     --dsp:"Oswald","Helvetica Neue",Arial,sans-serif; --body:"Inter",system-ui,sans-serif;
   }
   *,*::before,*::after{box-sizing:border-box}
@@ -23,84 +23,107 @@
   img{max-width:100%;display:block}
   a{color:inherit;text-decoration:none}
   h1,h2,h3{font-family:var(--dsp);font-weight:700;line-height:1.02;margin:0;color:var(--cream);text-transform:uppercase;letter-spacing:.01em}
-  .shell{width:100%;max-width:var(--shell);margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+  .shell{width:100%;max-width:var(--shell);margin:0 auto;padding:0 clamp(20px,5vw,44px)}
   .gold{color:var(--gold)}
-  .eyebrow{font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.32em;font-size:.8rem;color:var(--gold);margin:0 0 14px}
+  .eyebrow{font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.34em;font-size:.78rem;color:var(--gold);margin:0 0 14px}
   .btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:1rem;padding:.85em 1.7em;border-radius:6px;border:1.5px solid var(--gold);transition:transform .15s ease,background .2s,color .2s}
   .btn--gold{background:var(--gold);color:#12182a}
   .btn--gold:hover{background:var(--gold-2);border-color:var(--gold-2);transform:translateY(-2px)}
   .btn--ghost{color:var(--cream);border-color:rgba(255,255,255,.25)}
   .btn--ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
 
-  /* header */
   header{position:sticky;top:0;z-index:50;background:rgba(10,18,34,.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-  .nav img{height:38px;width:auto}
-  .nav .btn{padding:.6em 1.3em;font-size:.9rem}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .nav img{height:36px;width:auto}
+  .nav .btn{padding:.55em 1.2em;font-size:.85rem}
 
   /* hero */
-  .hero{position:relative;padding:clamp(56px,9vw,110px) 0 clamp(40px,6vw,70px);text-align:center;
-    background:radial-gradient(1200px 500px at 50% -10%,rgba(201,162,74,.10),transparent 70%)}
-  .hero h1{font-size:clamp(2.8rem,9vw,6rem);letter-spacing:-.01em}
-  .hero p.lede{max-width:44ch;margin:22px auto 0;font-size:clamp(1.05rem,2vw,1.3rem);color:var(--text)}
-  .hero .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
-  .badge{display:inline-block;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--gold);border:1px solid var(--line);border-radius:999px;padding:8px 16px}
+  .hero{position:relative;padding:clamp(52px,8vw,96px) 0 clamp(30px,4vw,48px);text-align:center;
+    background:radial-gradient(1100px 480px at 50% -12%,rgba(201,162,74,.10),transparent 70%)}
+  .badge{display:inline-block;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--gold);border:1px solid var(--line);border-radius:999px;padding:8px 16px;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.6rem,8vw,5.4rem);letter-spacing:-.01em}
+  .hero p.lede{max-width:46ch;margin:20px auto 0;font-size:clamp(1.05rem,2vw,1.28rem)}
+  .hero .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
 
-  /* stat bar */
+  /* stat strip */
   .stats{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:var(--navy-2)}
-  .stats .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-  .stat{padding:clamp(26px,4vw,42px) 18px;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
+  .stats .grid{display:grid;grid-template-columns:repeat(4,1fr)}
+  .stat{padding:clamp(24px,4vw,40px) 16px;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
   .stat:last-child{border-right:none}
-  .stat b{display:block;font-family:var(--dsp);font-weight:700;color:var(--cream);font-size:clamp(2rem,5vw,3.1rem);line-height:1}
-  .stat span{display:block;margin-top:8px;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .stat b{display:block;font-family:var(--dsp);font-weight:700;color:var(--cream);font-size:clamp(1.9rem,5vw,3rem);line-height:1}
   .stat b .gold{color:var(--gold)}
+  .stat span{display:block;margin-top:8px;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
 
-  section{padding:clamp(56px,8vw,104px) 0}
-  .sec-head{text-align:center;max-width:720px;margin:0 auto clamp(36px,5vw,56px)}
-  .sec-head h2{font-size:clamp(2rem,5vw,3.4rem)}
-  .sec-head p{margin:16px auto 0;color:var(--text);font-size:1.05rem}
+  section{padding:clamp(52px,7vw,96px) 0}
+  .sec-head{text-align:center;max-width:720px;margin:0 auto clamp(34px,5vw,52px)}
+  .sec-head h2{font-size:clamp(2rem,5vw,3.3rem)}
+  .sec-head p{margin:14px auto 0;font-size:1.04rem}
 
-  /* results grid */
-  .results{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .card{background:var(--navy-2);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(0,0,0,.8)}
-  .card img{width:100%;height:auto;display:block}
-  .card figcaption{padding:14px 18px;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;color:var(--muted);text-align:center}
-  .card figcaption b{color:var(--gold)}
+  /* case studies */
+  .cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .case{background:var(--navy-2);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 26px 54px -30px rgba(0,0,0,.85)}
+  .case__tag{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 0;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;color:var(--muted)}
+  .case__tag b{color:var(--gold)}
+  .case img{width:100%;height:auto;margin-top:12px}
 
-  /* proof */
-  .proof{background:var(--navy-2)}
-  .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:920px;margin:0 auto}
-  .quote{grid-column:1/-1;text-align:center;font-family:var(--dsp);font-weight:600;text-transform:uppercase;color:var(--cream);font-size:clamp(1.3rem,3vw,2rem);letter-spacing:.01em;margin:0 auto clamp(30px,4vw,46px);max-width:22ch;line-height:1.15}
-  .shot{background:#000;border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(0,0,0,.85)}
-  .shot img{width:100%;height:auto}
-  .shot figcaption{padding:14px 16px;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:center;font-family:var(--dsp);font-weight:600}
-  .shot figcaption b{color:var(--gold)}
+  /* wins (texts) */
+  .wins{background:var(--navy-2)}
+  .wins-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:900px;margin:0 auto}
+  .win{background:#000;border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(0,0,0,.85)}
+  .win img{width:100%}
+  .win figcaption{padding:14px 16px;text-align:center;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;color:var(--muted)}
+  .win figcaption b{color:var(--gold);font-size:1.05rem}
+
+  /* calculator */
+  .calc-wrap{max-width:1000px;margin:0 auto;background:var(--navy-2);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,4vw,44px);box-shadow:0 30px 60px -30px rgba(0,0,0,.85)}
+  .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,48px);align-items:center}
+  .calc-field{margin-bottom:26px}
+  .calc-field:last-child{margin-bottom:0}
+  .calc-field .row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+  .calc-field label{font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;color:var(--cream)}
+  .calc-field .val{font-family:var(--dsp);font-weight:700;color:var(--gold);font-size:1.15rem}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:999px;background:linear-gradient(90deg,var(--gold),var(--gold));background-color:#26344f;outline:none}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--gold);border:3px solid #0c1526;box-shadow:0 2px 8px rgba(0,0,0,.5);cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--gold);border:3px solid #0c1526;cursor:pointer}
+  .ticket{display:flex;align-items:center;gap:8px;background:#0c1526;border:1.5px solid var(--line);border-radius:8px;padding:10px 14px}
+  .ticket span{font-family:var(--dsp);font-weight:700;color:var(--gold);font-size:1.2rem}
+  .ticket input{flex:1;background:transparent;border:none;outline:none;color:var(--cream);font-family:var(--dsp);font-weight:700;font-size:1.2rem;width:100%}
+  .calc-out{background:#0c1526;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:clamp(20px,3vw,30px)}
+  .calc-out .mini{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+  .calc-out .mini div{text-align:center;background:var(--navy-2);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px 8px}
+  .calc-out .mini b{display:block;font-family:var(--dsp);font-weight:700;color:var(--cream);font-size:1.5rem;line-height:1}
+  .calc-out .mini span{display:block;margin-top:6px;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .calc-rev{text-align:center;border-top:1px solid rgba(255,255,255,.08);padding-top:20px}
+  .calc-rev .lab{font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--muted)}
+  .calc-rev .big{font-family:var(--dsp);font-weight:700;color:var(--gold);font-size:clamp(2.6rem,7vw,4rem);line-height:1;margin:6px 0}
+  .calc-rev .roi{font-family:var(--dsp);font-weight:600;color:var(--cream);letter-spacing:.04em}
+  .calc-note{text-align:center;color:var(--muted);font-size:.82rem;margin:18px auto 0;max-width:60ch}
 
   /* process */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .step{background:var(--navy-2);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:28px 22px}
-  .step .n{font-family:var(--dsp);font-weight:700;font-size:1.6rem;color:var(--gold);line-height:1}
-  .step h3{margin:12px 0 8px;font-size:1.15rem;color:var(--cream)}
-  .step p{margin:0;font-size:.96rem;color:var(--text)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .step{background:var(--navy-2);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:26px 20px}
+  .step .n{font-family:var(--dsp);font-weight:700;font-size:1.5rem;color:var(--gold)}
+  .step h3{margin:10px 0 7px;font-size:1.08rem}
+  .step p{margin:0;font-size:.94rem}
 
-  /* cta */
   .cta{text-align:center;background:radial-gradient(900px 400px at 50% 120%,rgba(201,162,74,.12),transparent 70%)}
-  .cta h2{font-size:clamp(2.2rem,6vw,4rem)}
-  .cta p{max-width:46ch;margin:16px auto 0;font-size:1.1rem}
-  .cta .actions{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta h2{font-size:clamp(2.2rem,6vw,3.8rem)}
+  .cta p{max-width:46ch;margin:14px auto 0;font-size:1.08rem}
+  .cta .actions{margin-top:28px}
 
-  footer{border-top:1px solid rgba(255,255,255,.07);padding:34px 0;text-align:center}
-  footer img{height:34px;margin:0 auto 14px}
-  footer p{margin:0;color:var(--muted);font-size:.86rem}
+  footer{border-top:1px solid rgba(255,255,255,.07);padding:32px 0;text-align:center}
+  footer img{height:32px;margin:0 auto 12px}
+  footer p{margin:0;color:var(--muted);font-size:.84rem}
 
-  @media(max-width:860px){
+  @media(max-width:900px){
     .stats .grid{grid-template-columns:repeat(2,1fr)}
     .stat:nth-child(2){border-right:none}
-    .results{grid-template-columns:1fr;max-width:460px;margin:0 auto}
+    .cases{grid-template-columns:1fr;max-width:440px;margin:0 auto}
+    .calc-grid{grid-template-columns:1fr}
     .steps{grid-template-columns:1fr 1fr}
   }
   @media(max-width:560px){
-    .proof-grid{grid-template-columns:1fr;max-width:420px}
+    .wins-grid{grid-template-columns:1fr;max-width:400px}
     .steps{grid-template-columns:1fr}
     .stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}
   }
@@ -120,70 +143,111 @@
 <section class="hero">
   <div class="shell">
     <span class="badge">Home Services · Meta Ads</span>
-    <h1 style="margin-top:22px">More Leads.<br><span class="gold">More Growth.</span></h1>
-    <p class="lede">We help home-service businesses book an extra <strong style="color:var(--cream)">3–4 jobs every month</strong> with Meta ad campaigns built to actually convert.</p>
+    <h1>Real Results,<br><span class="gold">Not Promises.</span></h1>
+    <p class="lede">We book home-service contractors an extra <strong style="color:var(--cream)">3–4 jobs a month</strong> with Meta ad campaigns built to convert. Here's the proof.</p>
     <div class="actions">
-      <a class="btn btn--gold" href="#book">Get More Jobs</a>
-      <a class="btn btn--ghost" href="#results">See the Results</a>
+      <a class="btn btn--gold" href="#calculator">Calculate My Revenue</a>
+      <a class="btn btn--ghost" href="#work">See the Work</a>
     </div>
   </div>
 </section>
 
-<!-- STAT BAR -->
+<!-- STAT STRIP -->
 <div class="stats">
   <div class="shell">
     <div class="grid">
-      <div class="stat"><b>613+</b><span>Leads Generated</span></div>
+      <div class="stat"><b>613<span class="gold">+</span></b><span>Leads Generated</span></div>
       <div class="stat"><b>$20<span class="gold">avg</span></b><span>Cost Per Lead</span></div>
-      <div class="stat"><b>$137K+</b><span>Contracts Closed</span></div>
+      <div class="stat"><b>$137K<span class="gold">+</span></b><span>Contracts Closed</span></div>
       <div class="stat"><b>3–4</b><span>Extra Jobs / Month</span></div>
     </div>
   </div>
 </div>
 
-<!-- RESULTS -->
-<section id="results">
+<!-- CASE STUDIES -->
+<section id="work">
   <div class="shell">
     <div class="sec-head">
-      <p class="eyebrow">Real Campaign. Real Results.</p>
-      <h2>Live campaigns, straight from<br>Meta Ads Manager.</h2>
+      <p class="eyebrow">Real Campaign · Real Results</p>
+      <h2>Case studies, straight from<br>Meta Ads Manager.</h2>
       <p>Active home-services campaigns — clients anonymized. Real spend, real leads, real cost-per-lead.</p>
     </div>
-    <div class="results">
-      <figure class="card">
-        <img src="assets/results-240.png" alt="Meta Ads results: 240 leads at $12.70 cost per lead, $3,048.63 spent" loading="lazy">
-        <figcaption><b>240 leads</b> · $12.70 / lead</figcaption>
+    <div class="cases">
+      <figure class="case">
+        <div class="case__tag"><span>Case Study 01</span><b>$12.70 / lead</b></div>
+        <img src="assets/results-240.png" alt="240 leads at $12.70 cost per lead, $3,048.63 spent" loading="lazy">
       </figure>
-      <figure class="card">
-        <img src="assets/results-284.png" alt="Meta Ads results: 284 leads at $20.71 cost per lead, $5.88K spent" loading="lazy">
-        <figcaption><b>284 leads</b> · $20.71 / lead</figcaption>
+      <figure class="case">
+        <div class="case__tag"><span>Case Study 02</span><b>$20.71 / lead</b></div>
+        <img src="assets/results-284.png" alt="284 leads at $20.71 cost per lead, $5.88K spent" loading="lazy">
       </figure>
-      <figure class="card">
-        <img src="assets/results-89.png" alt="Meta Ads results: 89 leads at $32.93 cost per lead, $2.93K spent" loading="lazy">
-        <figcaption><b>89 leads</b> · $32.93 / lead</figcaption>
+      <figure class="case">
+        <div class="case__tag"><span>Case Study 03</span><b>$32.93 / lead</b></div>
+        <img src="assets/results-89.png" alt="89 leads at $32.93 cost per lead, $2.93K spent" loading="lazy">
       </figure>
     </div>
   </div>
 </section>
 
-<!-- PROOF -->
-<section class="proof">
+<!-- CLIENT WINS -->
+<section class="wins">
   <div class="shell">
     <div class="sec-head">
       <p class="eyebrow">Straight From Our Clients</p>
       <h2>Leads turn into<br>signed contracts.</h2>
     </div>
-    <div class="proof-grid">
-      <p class="quote">"Closed them at 7pm for <span class="gold">$120K</span> — huge shout to you guys."</p>
-      <figure class="shot">
+    <div class="wins-grid">
+      <figure class="win">
         <img src="assets/text-roofing.jpg" alt="Client text: 20+ leads in 3 days, closed a $120K roofing contract" loading="lazy">
-        <figcaption>Roofing · <b>$120K contract closed</b></figcaption>
+        <figcaption>Roofing · <b>$120K closed</b></figcaption>
       </figure>
-      <figure class="shot">
+      <figure class="win">
         <img src="assets/text-mike.jpg" alt="Client text: back-to-back meetings in 3 days, closed a $17K contract" loading="lazy">
-        <figcaption>Home services · <b>$17K contract closed</b></figcaption>
+        <figcaption>Home services · <b>$17K closed</b></figcaption>
       </figure>
     </div>
+  </div>
+</section>
+
+<!-- REVENUE CALCULATOR -->
+<section id="calculator">
+  <div class="shell">
+    <div class="sec-head">
+      <p class="eyebrow">Project Your Growth</p>
+      <h2>Revenue Calculator</h2>
+      <p>Move the sliders to see what a Meta ad campaign could do for your business.</p>
+    </div>
+    <div class="calc-wrap">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <div class="calc-field">
+            <div class="row"><label for="adSpend">Daily Ad Spend</label><span class="val" id="adSpendValue">$65</span></div>
+            <input type="range" id="adSpend" min="30" max="500" value="65" oninput="calculateRevenue()">
+          </div>
+          <div class="calc-field">
+            <div class="row"><label for="ticketPrice">Avg Ticket Price</label></div>
+            <div class="ticket"><span>$</span><input type="text" id="ticketPrice" inputmode="numeric" value="1000" oninput="calculateRevenue()"></div>
+          </div>
+          <div class="calc-field">
+            <div class="row"><label for="closeRate">Close Rate</label><span class="val" id="closeRateValue">30%</span></div>
+            <input type="range" id="closeRate" min="1" max="100" value="30" oninput="calculateRevenue()">
+          </div>
+        </div>
+        <div class="calc-out">
+          <div class="mini">
+            <div><b id="leads">0</b><span>Est. Leads</span></div>
+            <div><b id="deals">0</b><span>Est. Jobs</span></div>
+            <div><b id="spend">$0</b><span>Investment</span></div>
+          </div>
+          <div class="calc-rev">
+            <div class="lab">Projected Monthly Revenue</div>
+            <div class="big" id="revenue">$0</div>
+            <div class="roi"><span id="roi">0%</span> ROI</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="calc-note">Estimates based on real Meta campaign benchmarks (cost-per-lead by spend level) and a $2,500/mo management retainer. Your actual results depend on your offer, market, and close rate.</p>
   </div>
 </section>
 
@@ -195,10 +259,10 @@
       <h2>How we get you 3–4<br>more jobs a month.</h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="n">01</div><h3>Dial In the Offer</h3><p>We nail down your service, area, and an offer that makes homeowners reach out.</p></div>
-      <div class="step"><div class="n">02</div><h3>Launch Meta Ads</h3><p>High-converting lead-form campaigns go live — often driving leads within days.</p></div>
-      <div class="step"><div class="n">03</div><h3>Leads to You</h3><p>Qualified leads land straight in your phone and calendar, ready to book.</p></div>
-      <div class="step"><div class="n">04</div><h3>You Close</h3><p>You show up, quote, and close — and we keep the pipeline full.</p></div>
+      <div class="step"><div class="n">01</div><h3>Dial In the Offer</h3><p>We lock in your service, area, and an offer homeowners act on.</p></div>
+      <div class="step"><div class="n">02</div><h3>Launch Meta Ads</h3><p>High-converting lead campaigns go live — often driving leads in days.</p></div>
+      <div class="step"><div class="n">03</div><h3>Leads to You</h3><p>Qualified leads land in your phone and calendar, ready to book.</p></div>
+      <div class="step"><div class="n">04</div><h3>You Close</h3><p>You quote and close — we keep the pipeline full.</p></div>
     </div>
   </div>
 </section>
@@ -208,10 +272,8 @@
   <div class="shell">
     <p class="eyebrow">Let's Grow Your Business</p>
     <h2>Ready for more jobs?</h2>
-    <p>Let's get your calendar full. Book a quick call and we'll map out how we'll bring you an extra 3–4 jobs a month.</p>
-    <div class="actions">
-      <a class="btn btn--gold" href="#book">Book a Call</a>
-    </div>
+    <p>Book a quick call and we'll map out exactly how we'll bring you an extra 3–4 jobs a month.</p>
+    <div class="actions"><a class="btn btn--gold" href="#book">Book a Call</a></div>
   </div>
 </section>
 
@@ -222,6 +284,33 @@
   </div>
 </footer>
 
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  function calculateRevenue(){
+    var adSpend=parseFloat(document.getElementById('adSpend').value);
+    var ticketPrice=parseFloat(document.getElementById('ticketPrice').value)||0;
+    var closeRate=parseFloat(document.getElementById('closeRate').value);
+    document.getElementById('adSpendValue').innerText='$'+adSpend;
+    document.getElementById('closeRateValue').innerText=closeRate+'%';
+    var monthlySpend=adSpend*30;
+    // realistic contractor CPL by spend level (Meta benchmarks)
+    var cpl;
+    if(adSpend<50){cpl=90;}
+    else if(adSpend<100){cpl=75;}
+    else if(adSpend<200){cpl=60;}
+    else{cpl=50;}
+    var estimatedLeads=Math.floor(monthlySpend/cpl);
+    var closedDeals=Math.round(estimatedLeads*(closeRate/100)*10)/10;
+    var adSpendPlusRetainer=monthlySpend+2500; // ad spend + management retainer
+    var revenue=closedDeals*ticketPrice;
+    var roi=adSpendPlusRetainer>0?((revenue-adSpendPlusRetainer)/adSpendPlusRetainer)*100:0;
+    document.getElementById('leads').innerText=estimatedLeads;
+    document.getElementById('deals').innerText=closedDeals;
+    document.getElementById('spend').innerText='$'+adSpendPlusRetainer.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+    document.getElementById('revenue').innerText='$'+revenue.toLocaleString('en-US');
+    document.getElementById('roi').innerText=roi.toFixed(2)+'%';
+  }
+  calculateRevenue();
+</script>
 </body>
 </html>
