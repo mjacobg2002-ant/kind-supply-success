@@ -38,8 +38,13 @@
   .nav .btn{padding:.55em 1.2em;font-size:.85rem}
 
   /* hero */
-  .hero{position:relative;padding:clamp(52px,8vw,96px) 0 clamp(30px,4vw,48px);text-align:center;
-    background:radial-gradient(1100px 480px at 50% -12%,rgba(201,162,74,.10),transparent 70%)}
+  .hero{position:relative;padding:clamp(62px,9vw,108px) 0 clamp(38px,5vw,60px);text-align:center;overflow:hidden;background:#0a0f1a}
+  .hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:grayscale(.2)}
+  .hero__scrim{position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(10,16,28,.86),rgba(12,21,38,.80) 45%,rgba(12,21,38,.94)),
+      radial-gradient(1100px 480px at 50% -12%,rgba(201,162,74,.14),transparent 70%);
+    -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+  .hero .shell{position:relative;z-index:2}
   .badge{display:inline-block;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--gold);border:1px solid var(--line);border-radius:999px;padding:8px 16px;margin-bottom:22px}
   .hero h1{font-size:clamp(2.6rem,8vw,5.4rem);letter-spacing:-.01em}
   .hero p.lede{max-width:46ch;margin:20px auto 0;font-size:clamp(1.05rem,2vw,1.28rem)}
@@ -74,6 +79,28 @@
   .win figcaption{padding:14px 16px;text-align:center;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;color:var(--muted)}
   .win figcaption b{color:var(--gold);font-size:1.05rem}
 
+  /* speed-to-lead CRM */
+  .crm{background:var(--navy-2)}
+  .crm-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,60px);align-items:center}
+  .crm-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;color:#12182a;background:var(--gold);border-radius:999px;padding:7px 15px;margin-bottom:18px}
+  .crm h2{font-size:clamp(2rem,5vw,3.2rem)}
+  .crm .lede{margin:16px 0 24px;font-size:1.06rem;max-width:48ch}
+  .crm-feats{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;margin:0;padding:0;list-style:none}
+  .crm-feats li{position:relative;padding-left:30px;font-size:.98rem;color:var(--text)}
+  .crm-feats li b{display:block;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--cream);font-size:.92rem;margin-bottom:2px}
+  .crm-feats li::before{content:"";position:absolute;left:0;top:6px;width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(201,162,74,.18)}
+  /* phone mock */
+  .phone{max-width:330px;margin:0 auto;background:#0a0f1a;border:1px solid rgba(255,255,255,.12);border-radius:34px;padding:16px 14px 20px;box-shadow:0 34px 70px -30px rgba(0,0,0,.9)}
+  .phone__bar{display:flex;align-items:center;gap:10px;padding:4px 6px 14px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:14px}
+  .phone__ava{width:34px;height:34px;border-radius:50%;background:var(--gold);color:#12182a;font-family:var(--dsp);font-weight:700;display:flex;align-items:center;justify-content:center}
+  .phone__who{font-family:var(--dsp);font-weight:600;color:var(--cream);font-size:.95rem;line-height:1.1}
+  .phone__who small{display:block;color:#4ade80;font-size:.66rem;letter-spacing:.04em;font-family:var(--body);font-weight:600}
+  .bub{max-width:82%;padding:10px 14px;border-radius:16px;font-size:.9rem;line-height:1.4;margin-bottom:10px}
+  .bub--in{background:#1c2740;color:#e7ecf5;border-bottom-left-radius:5px}
+  .bub--out{background:var(--gold);color:#12182a;border-bottom-right-radius:5px;margin-left:auto;font-weight:500}
+  .bub__meta{display:block;margin-top:5px;font-size:.64rem;letter-spacing:.03em;opacity:.7;font-weight:600}
+  .zap{display:inline-flex;align-items:center;gap:6px;margin:2px auto 0;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;color:var(--gold);width:100%;justify-content:center}
+
   /* calculator */
   .calc-wrap{max-width:1000px;margin:0 auto;background:var(--navy-2);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,4vw,44px);box-shadow:0 30px 60px -30px rgba(0,0,0,.85)}
   .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,48px);align-items:center}
@@ -106,7 +133,9 @@
   .step h3{margin:10px 0 7px;font-size:1.08rem}
   .step p{margin:0;font-size:.94rem}
 
-  .cta{text-align:center;background:radial-gradient(900px 400px at 50% 120%,rgba(201,162,74,.12),transparent 70%)}
+  .cta{text-align:center;position:relative;
+    background:linear-gradient(rgba(11,18,32,.90),rgba(12,21,38,.95)),radial-gradient(900px 400px at 50% 120%,rgba(201,162,74,.14),transparent 70%),url('assets/concrete-poster.jpg') center/cover no-repeat;
+    background-blend-mode:normal}
   .cta h2{font-size:clamp(2.2rem,6vw,3.8rem)}
   .cta p{max-width:46ch;margin:14px auto 0;font-size:1.08rem}
   .cta .actions{margin-top:28px}
@@ -120,6 +149,8 @@
     .stat:nth-child(2){border-right:none}
     .cases{grid-template-columns:1fr;max-width:440px;margin:0 auto}
     .calc-grid{grid-template-columns:1fr}
+    .crm-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}
+    .phone{order:-1}
     .steps{grid-template-columns:1fr 1fr}
   }
   @media(max-width:560px){
@@ -141,6 +172,10 @@
 
 <!-- HERO -->
 <section class="hero">
+  <video class="hero__bg" autoplay muted loop playsinline preload="auto" poster="assets/concrete-poster.jpg" aria-hidden="true">
+    <source src="assets/concrete.mp4" type="video/mp4">
+  </video>
+  <div class="hero__scrim" aria-hidden="true"></div>
   <div class="shell">
     <span class="badge">Home Services · Meta Ads</span>
     <h1>Real Results,<br><span class="gold">Not Promises.</span></h1>
@@ -205,6 +240,38 @@
         <img src="assets/text-mike.jpg" alt="Client text: back-to-back meetings in 3 days, closed a $17K contract" loading="lazy">
         <figcaption>Home services · <b>$17K closed</b></figcaption>
       </figure>
+    </div>
+  </div>
+</section>
+
+<!-- SPEED-TO-LEAD CRM -->
+<section class="crm" id="crm">
+  <div class="shell">
+    <div class="crm-grid">
+      <div class="crm-copy">
+        <span class="crm-badge">★ Included With Every Campaign</span>
+        <h2>Speed-to-Lead CRM,<br><span class="gold">built right in.</span></h2>
+        <p class="lede">Leads don't wait. The second one comes in, our CRM texts and emails them automatically — so you're the first to reply, not the fifth. Every lead captured, followed up, and booked in one place.</p>
+        <ul class="crm-feats">
+          <li><b>Instant Lead Text-Back</b>New leads get a reply in seconds, 24/7.</li>
+          <li><b>Missed-Call Text-Back</b>Miss a call? It auto-texts them back.</li>
+          <li><b>Automated Follow-Ups</b>Smart SMS &amp; email sequences that chase every lead.</li>
+          <li><b>One Lead Inbox</b>Calls, texts &amp; forms in a single dashboard.</li>
+          <li><b>Calendar Booking</b>Leads book straight onto your calendar.</li>
+          <li><b>Review Requests</b>Auto-ask happy customers for 5-star reviews.</li>
+        </ul>
+      </div>
+      <div class="phone" aria-hidden="true">
+        <div class="phone__bar">
+          <div class="phone__ava">KS</div>
+          <div class="phone__who">New Lead · Jake<small>● Auto-responder active</small></div>
+        </div>
+        <div class="bub bub--in">Hi, I filled out the form for a roof estimate.</div>
+        <div class="bub bub--out">Hey Jake! 👋 Thanks for reaching out — we'd love to help with your roof. What day works for a quick free estimate?<span class="bub__meta">Auto-sent · 8 seconds</span></div>
+        <div class="bub bub--in">Wow that was fast! Tomorrow morning?</div>
+        <div class="bub bub--out">Perfect — booking you for 9:00 AM. You're on the calendar ✅<span class="bub__meta">Auto-sent · booked</span></div>
+        <span class="zap">⚡ Replied &amp; booked before your competition even saw it</span>
+      </div>
     </div>
   </div>
 </section>
@@ -286,6 +353,7 @@
 
 <script>
   document.getElementById('yr').textContent=new Date().getFullYear();
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){var hv=document.querySelector('.hero__bg');if(hv){hv.removeAttribute('autoplay');hv.pause&&hv.pause();}}
   function calculateRevenue(){
     var adSpend=parseFloat(document.getElementById('adSpend').value);
     var ticketPrice=parseFloat(document.getElementById('ticketPrice').value)||0;
