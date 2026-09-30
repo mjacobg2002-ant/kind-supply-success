@@ -5,20 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kind Supply Digital — Results Portfolio | Home Services</title>
 <meta name="description" content="Kind Supply Digital books home-service contractors an extra 3–4 jobs a month with Meta ads. Real campaigns, real closes — and a revenue calculator to project your own results.">
-<meta name="theme-color" content="#0c1526">
+<meta name="theme-color" content="#111a26">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0c1526; --navy-2:#111d33; --navy-3:#16233f;
-    --gold:#c9a24a; --gold-2:#e2c072;
-    --cream:#f4f1e9; --text:#c3ccdb; --muted:#808ba3; --line:rgba(201,162,74,.28);
+    --navy:#111a26; --navy-2:#18232f; --navy-3:#20303f;
+    --gold:#6aa6d0; --gold-2:#93c2e4;   /* calm steel-blue accent (trust/ease) */
+    --cream:#eef3f8; --text:#aeb9c7; --muted:#74828f; --line:rgba(106,166,208,.30);
     --shell:1120px;
     --dsp:"Plus Jakarta Sans","Inter",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif;
   }
   *,*::before,*::after{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:96px}
   body{margin:0;background:var(--navy);color:var(--text);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   img{max-width:100%;display:block}
   a{color:inherit;text-decoration:none}
@@ -32,7 +32,7 @@
   .btn--ghost{color:var(--cream);border-color:rgba(255,255,255,.25)}
   .btn--ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
 
-  header{position:sticky;top:0;z-index:50;padding:16px 0;background:transparent}
+  header{position:fixed;top:0;left:0;right:0;z-index:50;padding:16px 0;background:transparent}
   .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;
     background:rgba(18,24,34,.72);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);
     border:1px solid rgba(255,255,255,.10);border-radius:999px;
@@ -42,7 +42,7 @@
   .nav__links{justify-self:center;display:flex;gap:clamp(18px,2.4vw,34px)}
   .nav__links a{font-family:var(--dsp);font-weight:500;font-size:.95rem;color:#d5dbe6;transition:color .2s}
   .nav__links a:hover{color:#fff}
-  .nav__cta{justify-self:end;border-color:rgba(201,162,74,.5);color:var(--cream);box-shadow:0 0 26px -8px rgba(201,162,74,.55)}
+  .nav__cta{justify-self:end;border-color:rgba(106,166,208,.5);color:var(--cream);box-shadow:0 0 26px -8px rgba(106,166,208,.55)}
   .nav__cta:hover{background:var(--gold);border-color:var(--gold);color:#12182a;transform:translateY(-1px)}
   .nav .btn{padding:.62em 1.3em;font-size:.9rem;border-radius:999px}
   .nav .btn svg{width:15px;height:15px}
@@ -52,17 +52,25 @@
   }
 
   /* hero */
-  .hero{position:relative;padding:clamp(62px,9vw,108px) 0 clamp(38px,5vw,60px);text-align:center;overflow:hidden;background:#0a0f1a}
-  .hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:grayscale(.2)}
+  .hero{position:relative;padding:clamp(140px,20vh,210px) 0 clamp(44px,6vh,72px);text-align:center;overflow:hidden;background:#0a0f1a}
+  .hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:grayscale(.15)}
   .hero__scrim{position:absolute;inset:0;z-index:1;
-    background:linear-gradient(180deg,rgba(10,16,28,.86),rgba(12,21,38,.80) 45%,rgba(12,21,38,.94)),
-      radial-gradient(1100px 480px at 50% -12%,rgba(201,162,74,.14),transparent 70%);
-    -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+    background:linear-gradient(180deg,rgba(12,18,28,.78),rgba(14,22,32,.58) 42%,rgba(14,22,32,.80) 78%,rgba(17,26,38,.94)),
+      radial-gradient(1100px 480px at 50% -6%,rgba(106,166,208,.16),transparent 70%);
+    -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
   .hero .shell{position:relative;z-index:2}
-  .badge{display:inline-block;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--gold);border:1px solid var(--line);border-radius:999px;padding:8px 16px;margin-bottom:22px}
-  .hero h1{font-size:clamp(2.6rem,8vw,5.4rem);letter-spacing:-.01em}
+  .badge{display:inline-block;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--gold);border:1px solid var(--line);border-radius:999px;padding:8px 16px;margin-bottom:22px;background:rgba(12,18,28,.35)}
+  .hero h1{font-size:clamp(2.6rem,8vw,5.4rem);letter-spacing:-.01em;text-shadow:0 2px 30px rgba(0,0,0,.45)}
   .hero p.lede{max-width:46ch;margin:20px auto 0;font-size:clamp(1.05rem,2vw,1.28rem)}
   .hero .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+  /* stats overlaid on hero video */
+  .hero-stats{display:flex;justify-content:center;flex-wrap:wrap;max-width:920px;margin:clamp(40px,6vw,64px) auto 0;border-top:1px solid rgba(255,255,255,.16);padding-top:clamp(24px,3vw,34px)}
+  .hstat{padding:6px clamp(16px,3.2vw,42px);border-right:1px solid rgba(255,255,255,.14)}
+  .hstat:last-child{border-right:none}
+  .hstat b{display:block;font-family:var(--dsp);font-weight:700;color:var(--cream);font-size:clamp(1.6rem,4.2vw,2.4rem);line-height:1;text-shadow:0 2px 20px rgba(0,0,0,.4)}
+  .hstat b .gold{color:var(--gold)}
+  .hstat span{display:block;margin-top:7px;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--concrete-2,#b6c2cc)}
+  @media(max-width:560px){.hstat{border-right:none;flex:0 0 46%;padding:10px}}
 
   /* industries */
   #industries .shell,#work .shell{max-width:1320px}
@@ -113,7 +121,7 @@
   .crm-feats{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;margin:0;padding:0;list-style:none}
   .crm-feats li{position:relative;padding-left:30px;font-size:.98rem;color:var(--text)}
   .crm-feats li b{display:block;font-family:var(--dsp);font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--cream);font-size:.92rem;margin-bottom:2px}
-  .crm-feats li::before{content:"";position:absolute;left:0;top:6px;width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(201,162,74,.18)}
+  .crm-feats li::before{content:"";position:absolute;left:0;top:6px;width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(106,166,208,.18)}
   /* phone mock */
   .phone{max-width:330px;margin:0 auto;background:#0a0f1a;border:1px solid rgba(255,255,255,.12);border-radius:34px;padding:16px 14px 20px;box-shadow:0 34px 70px -30px rgba(0,0,0,.9)}
   .phone__bar{display:flex;align-items:center;gap:10px;padding:4px 6px 14px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:14px}
@@ -159,7 +167,7 @@
   .step p{margin:0;font-size:.94rem}
 
   .cta{text-align:center;position:relative;
-    background:linear-gradient(rgba(11,18,32,.90),rgba(12,21,38,.95)),radial-gradient(900px 400px at 50% 120%,rgba(201,162,74,.14),transparent 70%),url('assets/concrete-poster.jpg') center/cover no-repeat;
+    background:linear-gradient(rgba(11,18,32,.90),rgba(12,21,38,.95)),radial-gradient(900px 400px at 50% 120%,rgba(106,166,208,.14),transparent 70%),url('assets/concrete-poster.jpg') center/cover no-repeat;
     background-blend-mode:normal}
   .cta h2{font-size:clamp(2.2rem,6vw,3.8rem)}
   .cta p{max-width:46ch;margin:14px auto 0;font-size:1.08rem}
@@ -215,20 +223,14 @@
       <a class="btn btn--gold" href="#calculator">Calculate My Revenue</a>
       <a class="btn btn--ghost" href="#work">See the Work</a>
     </div>
-  </div>
-</section>
-
-<!-- STAT STRIP -->
-<div class="stats">
-  <div class="shell">
-    <div class="grid">
-      <div class="stat"><b>613<span class="gold">+</span></b><span>Leads Generated</span></div>
-      <div class="stat"><b>$20<span class="gold">avg</span></b><span>Cost Per Lead</span></div>
-      <div class="stat"><b>$137K<span class="gold">+</span></b><span>Contracts Closed</span></div>
-      <div class="stat"><b>3–4</b><span>Extra Jobs / Month</span></div>
+    <div class="hero-stats">
+      <div class="hstat"><b>613<span class="gold">+</span></b><span>Leads Generated</span></div>
+      <div class="hstat"><b>$20<span class="gold">avg</span></b><span>Cost Per Lead</span></div>
+      <div class="hstat"><b>$137K<span class="gold">+</span></b><span>Contracts Closed</span></div>
+      <div class="hstat"><b>3–4</b><span>Extra Jobs / Month</span></div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- INDUSTRIES -->
 <section id="industries">
